@@ -8,4 +8,7 @@ connectDB();
 app.use(express.json({extended:false}));
 app.use('/api',index);
 app.use(bodyParser.json());
+app.get('/',function(req,res){
+    res.send('Welcome to my diary');
+})
 app.listen(Port, () => console.log('Server started'));

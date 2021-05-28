@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
-
-const URI="mongodb+srv://dan:dbUser@cluster0.bit0v.mongodb.net/DiaryApp?retryWrites=true&w=majority";
+require('dotenv').config();
+const URI=process.env.dbConnection;
 
 const connectDB=async()=>{
 await mongoose.connect(URI,{ useNewUrlParser: true,
